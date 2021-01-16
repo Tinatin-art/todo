@@ -1,13 +1,12 @@
 from django.shortcuts import render, HttpResponse
 
+
+
 def homepage(request):
     return render(request, "index.html")
 
 def test(request):
     return render(request, "test.html")
-
-def page(request):
-    return render(request, "page.html")
 
 def second(request):
     return HttpResponse("Test 2 page")
