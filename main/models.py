@@ -8,11 +8,10 @@ class ToDo(models.Model):
 
 
 class BookShop(models.Model):
-    title = models.CharField("Заголовок", max_length=100)
-    subtitle = models.CharField("Подзаголовок", max_length=100)
-    description = models.TextField("Описание")
-    price = models.PositiveIntegerField("Цена")
-    genres = models.CharField("Жанры", max_length=100)
-    author = models.CharField("Имя", max_length=100)
-    year = models.PositiveSmallIntegerField("Дата выхода", default=2020)
-    date = models.DateField("Дата", auto_now_add=True)
+    text = models.CharField(max_length=100)
+    subtitle = models.CharField(max_length=100)
+    description = models.CharField(max_length=100)
+    price = models.PositiveIntegerField(max_length=50)
+    genres = models.CharField(max_length=100)
+    author = models.CharField(max_length=100)
+    year = models.DateField(auto_created=True)
