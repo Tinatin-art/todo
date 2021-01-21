@@ -17,6 +17,10 @@ def books(request):
 def second(request):
     return HttpResponse("Test 2 page")
 
-def third(request):
-    return HttpResponse("This page is test 2")
+def add_todo(request):
+    form = request.POST
+    text = form["todo_list"]
+    todo = ToDo(text=text)
+    todo.save()
+    return HttpResponse("Форма получена")
 
