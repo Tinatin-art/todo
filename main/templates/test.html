@@ -15,10 +15,11 @@
             <form action="{% url 'add-todo' %}" method="POST">
                 {% csrf_token %}
                 <input 
-                class="create_input" 
-                type="text" 
-                placeholder="Напишитие сюда новую задачу"
-                name="todo-test"                />
+                    class="create_input" 
+                    type="text" 
+                    placeholder="Напишитие сюда новую задачу"
+                    name="todo_test"                
+                />
                 <button class="create_button">Добавить</button>
             </form>
         </div>
