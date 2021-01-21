@@ -7,21 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    
-    {% for books in books_list %}
-        <h2>{{ books.text }}</h2>
-        <h2>{{ books.subtitle }}</h2>
-        <h2>{{ books.description }}</h2>
-        <h2>{{ books.genres }}</h2>
-        <h2>{{ books.author }}</h2>
-        <h2>{{ books.year }}</h2>
-        
-        
+        {% for books in books_list %}
+            <h2>{{ books.text }}</h2>
+            <h2>{{ books.subtitle }}</h2>
+            <h2>{{ books.description }}</h2>
+            <h2>{{ books.genres }}</h2>
+            <h2>{{ books.author }}</h2>
+            <h2>{{ books.year }}</h2>
     {% endfor%}
-    
-
-    
-        
-   
 </body>
 </html>
