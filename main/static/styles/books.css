@@ -4,6 +4,39 @@
     padding: 0;
     color: #071025;
 }
+section{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.create_container{
+    width: 80%;
+}
+.create_input{
+    padding: 15px 5px;
+    font-size: 18px;
+    width: 80%;
+}
+.create_button{
+    padding: 12px 20px;
+    background-color:  rgb(161, 53, 161);
+    border: 1px solid rgb(161, 53, 161);
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.create_button:active{
+    border: 1px solid rgb(161, 53, 161);
+    box-shadow: 2px 2px 5px 3px rgb(196, 125, 224);
+}
+
+
+
 
 .block{
     border: 2px solid black;
@@ -16,6 +49,8 @@
     border: 2px solid rgb(128, 0, 17);
     background-color: rgb(250, 129, 230);
 }
+
+
 
 h1{
     color: blue;
@@ -33,6 +68,7 @@ h2{
     font-style: italic;
     text-align: justify;
 }
+
 
 .price{
     color: rgb(5, 27, 226);
