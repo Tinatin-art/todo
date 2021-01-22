@@ -1,0 +1,16 @@
+.block{
+    border: 2px solid black;
+    width: 600px;
+    height: 300px;
+    color: rgb(8, 39, 218);
+    background-color: rgb(15, 236, 207);
+}
+
+h2{
+    color: blue;
+}
+
+h4{
+    color: rgb(233, 12, 222);
+}
+

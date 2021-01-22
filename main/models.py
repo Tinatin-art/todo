@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 
 class ToDo(models.Model):
     text = models.CharField(max_length=100)
@@ -9,3 +10,6 @@ class ToDo(models.Model):
 
 class Bookshop(models.Model):
     title = models.CharField(max_length=100)
+    subtitle = models.CharField(max_length=100,blank=True)
+    description = models.TextField(blank=True)
+    created_at = models.DateTimeField(default=datetime.now())
