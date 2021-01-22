@@ -10,11 +10,16 @@
 <body>
     <div class="block">
     {% for book in books_list %}
-        <h2>{{ book.title }}</h2>
-        <h4>{{ book.subtitle }}</h4>
-        <p>{{ book.description }}</p>
-            
-        <p>{{ book.created_at }}</p>
+        <div class="little_block">
+            <h1>{{ book.title }}</h1>
+            <h2>{{ book.subtitle }}</h2>
+            <p class="description">{{ book.description }}</p>
+        </div>
+        <span class="price">Цена: <span>{{ book.price }}</span> сом</span> <br>
+        <span class="genre">Жанр: <span>{{ book.genre }}</span></span> <br>
+        <span class="author">Автор: <span>{{ book.author }}</span></span><br>
+        <span class="year">Год выпуска: <span>{{ book.year }}</span></span><br>
+        <span class="date">Дата добавления книги на сайт: <span>{{ book.date }}</span></span>
     {% endfor %}
     </div>
 </body>

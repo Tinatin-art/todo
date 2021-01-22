@@ -1,16 +1,68 @@
+*{
+    box-sizing: border-box;
+    margin: 10px 10px;
+    padding: 0;
+    color: #071025;
+}
+
 .block{
     border: 2px solid black;
     width: 600px;
-    height: 300px;
+    height: 500px;
     color: rgb(8, 39, 218);
-    background-color: rgb(15, 236, 207);
+    background-color: rgb(255, 181, 245);
+}
+.little_block{
+    border: 2px solid rgb(128, 0, 17);
+    background-color: rgb(250, 129, 230);
+}
+
+h1{
+    color: blue;
+    text-align: center;
+    font-style: oblique;
 }
 
 h2{
-    color: blue;
+    color: rgb(211, 7, 24);
+    text-align: center;
+    font-style: oblique;
+}
+.description{
+    font-size: 24px;
+    font-style: italic;
+    text-align: justify;
 }
 
-h4{
-    color: rgb(233, 12, 222);
+.price{
+    color: rgb(5, 27, 226);
+    font-size: 18px;
+    font-weight: bold;
+}
+.genre{
+    color: rgb(5, 27, 226);
+    font-size: 18px;
+    font-weight: bold;
 }
 
+.author{
+    color: rgb(5, 27, 226);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.year{
+    color: rgb(5, 27, 226);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.date{
+    color: rgb(5, 27, 226);
+    font-size: 18px;
+    font-weight:bold;
+}
+
+span{
+    color: black;
+}
