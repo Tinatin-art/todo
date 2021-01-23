@@ -6,6 +6,9 @@ from .models import Bookshop
 def homepage(request):
     return render(request, "index.html")
 
+def books2(request):
+    return render(request, "books2.html")
+
 def test(request):
     todo_list = ToDo.objects.all()
     return render(request, "test.html", {"todo_list": todo_list})
@@ -13,6 +16,8 @@ def test(request):
 def book(request):
     books_list = Bookshop.objects.all()
     return render(request, "books.html", {"books_list": books_list})
+
+
 
 def second(request):
     return HttpResponse("Test 2 page")

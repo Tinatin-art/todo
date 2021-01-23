@@ -117,3 +117,8 @@ a img{
     width: 35px;
     height: 35px;
 }
+
+.block.marked{
+    background-color: rgb(236, 236, 97);
+    border: 2px solid rgb(206, 206, 48);
+}
