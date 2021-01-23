@@ -97,8 +97,23 @@ h2{
     color: rgb(5, 27, 226);
     font-size: 18px;
     font-weight:bold;
+    margin-top: 5px;
 }
 
 span{
     color: black;
+}
+
+.action_buttons{
+    width: 100px;
+    height: 50px;
+    margin: 0;
+    display: flex;
+    float: right;
+}
+
+a img{
+    margin: 0;
+    width: 35px;
+    height: 35px;
 }

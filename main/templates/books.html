@@ -57,20 +57,38 @@
                 <button class="create_button">Добавить</button>
             </form>
         </div>
+        <div class="full_box">
             {% for book in books_list %}
-            <div class="block">
-                <div class="little_block">
-                    <h1>{{ book.title }}</h1>
-                    <h2>{{ book.subtitle }}</h2>
-                    <p class="description">{{ book.description }}</p>
+            <div class="wrap
+                {% if books.is_favorite %}
+                    marked
+                {% endif %}
+            ">
+                <div class="block">
+                    <div class="little_block">
+                        <h1>{{ book.title }}</h1>
+                        <h2>{{ book.subtitle }}</h2>
+                        <p class="description">{{ book.description }}</p>
+                    </div>
+                    <span class="price">Цена: <span>{{ book.price }}</span> сом</span> <br>
+                    <span class="genre">Жанр: <span>{{ book.genre }}</span></span> <br>
+                    <span class="author">Автор: <span>{{ book.author }}</span></span><br>
+                    <span class="year">Год выпуска: <span>{{ book.year }}</span></span><br>
+                    <span class="date">Дата добавления книги на сайт: <span>{{ book.date }}</span></span>
+            
+                    <div class="action_buttons" >
+                        {% if books.is_favorite %}
+                            <a href="{% url 'unmark-book' books.id %}"><img src="{% static './icons/star.png' %}"></a>
+                        {% else %}
+                            <a href="{% url 'mark-book' books.id %}"><img src="{% static './icons/star--v1.png'%}"></a>
+                        {% endif %}
+                            <a  href="{% url 'delete-book' books.id %}"><img src="{% static './icons/trash-empty.png'%}"></a>
+                    </div>
+                    </div>
                 </div>
-                <span class="price">Цена: <span>{{ book.price }}</span> сом</span> <br>
-                <span class="genre">Жанр: <span>{{ book.genre }}</span></span> <br>
-                <span class="author">Автор: <span>{{ book.author }}</span></span><br>
-                <span class="year">Год выпуска: <span>{{ book.year }}</span></span><br>
-                <span class="date">Дата добавления книги на сайт: <span>{{ book.date }}</span></span>     
             </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </section>
 </body>
 </html>
