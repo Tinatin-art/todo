@@ -9,6 +9,7 @@
 </head>
 <body>
     <section>
+        <h1 class="title">Bookshop</h1>
         <div class="create_container">
             <form action="{% url 'add-book' %}" method="POST">
                 {% csrf_token %}
@@ -61,34 +62,39 @@
             {% for book in books_list %}
             <div class="wrap">
                 <div class="block
-                    {% if books.is_favorite %}
-                        marked
+                    {% if book.is_favorite %}
+                        mark
                     {% endif %}
                 
                 ">
-                    <div class="little_block">
-                        <h1>{{ book.title }}</h1>
-                        <h2>{{ book.subtitle }}</h2>
-                        <p class="description">{{ book.description }}</p>
-                    </div>
-                    <span class="price">Цена: <span>{{ book.price }}</span> сом</span> <br>
-                    <span class="genre">Жанр: <span>{{ book.genre }}</span></span> <br>
-                    <span class="author">Автор: <span>{{ book.author }}</span></span><br>
-                    <span class="year">Год выпуска: <span>{{ book.year }}</span></span><br>
-                    <span class="date">Дата добавления книги на сайт: <span>{{ book.date }}</span></span>
+                <div class="little_block
+                    {% if book.is_favorite %}
+                        mark
+                    {% endif %}
+                
+                ">
+                    <h1>{{ book.title }}</h1>
+                    <h2>{{ book.subtitle }}</h2>
+                    <p class="description">{{ book.description }}</p>
+                </div>
+                <span class="price">Цена: <span>{{ book.price }}</span> сом</span> <br>
+                <span class="genre">Жанр: <span>{{ book.genre }}</span></span> <br>
+                <span class="author">Автор: <span>{{ book.author }}</span></span><br>
+                <span class="year">Год выпуска: <span>{{ book.year }}</span></span><br>
+                <span class="date">Дата добавления книги на сайт: <span>{{ book.date }}</span></span>
             
-                        <div class="action_buttons" >
-                            {% if books.is_favorite %}
+                    <div class="action_buttons" >
+                            {% if book.is_favorite %}
                                 <a href="{% url 'unmark-book' book.id %}"><img src="{% static './icons/star.png' %}"></a>
                             {% else %}
                                 <a href="{% url 'mark-book' book.id %}"><img src="{% static './icons/star--v1.png'%}"></a>
                             {% endif %}
                                 <a  href="{% url 'delete-book' book.id %}"><img src="{% static './icons/trash-empty.png'%}"></a>
-                        </div>
                     </div>
                 </div>
             </div>
-            {% endfor %}
+        </div>
+        {% endfor %}
     </section>
 </body>
 </html>
