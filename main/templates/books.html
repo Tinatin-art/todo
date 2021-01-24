@@ -77,7 +77,8 @@
                     <h2>{{ book.subtitle }}</h2>
                     <p class="description">{{ book.description }}</p>
                 </div>
-                <span class="price">Цена: <span>{{ book.price }}</span> сом</span> <br>
+                <span class="price">Цена: <span>{{ book.price }}</span> сом</span> 
+                <a href="{% url 'bookdetail' book.id %}">***</a> <br>
                 <span class="genre">Жанр: <span>{{ book.genre }}</span></span> <br>
                 <span class="author">Автор: <span>{{ book.author }}</span></span><br>
                 <span class="year">Год выпуска: <span>{{ book.year }}</span></span><br>

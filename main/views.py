@@ -59,6 +59,10 @@ def delete_book(request, id):
     books.delete()
     return redirect(book)
 
+def BooksDetail(request, id):
+    book_object = Bookshop.objects.get(id=id)
+    return render(request, "books_detail.html", {"book_object": book_object})
+
 def add_book(request):
     form = request.POST
     books1 = form["book_title"]

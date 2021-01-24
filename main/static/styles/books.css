@@ -114,7 +114,7 @@ span{
 .action_buttons{
     width: 100px;
     height: 50px;
-    margin: 0;
+    margin: 0 auto;
     display: flex;
     float: right;
 }
@@ -134,3 +134,4 @@ a img{
     background-color: rgb(236, 236, 97);
     border: 2px solid rgb(206, 206, 48);
 }
+
