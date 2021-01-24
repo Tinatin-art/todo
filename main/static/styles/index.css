@@ -78,6 +78,7 @@ section{
     font-size: 18px;
     font-family: sans-serif;
 }
+
 .todo_item.footer{
     display: flex;
     justify-content: space-between;
